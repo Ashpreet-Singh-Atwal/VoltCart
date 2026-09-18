@@ -1,0 +1,17 @@
+{
+  "name": "voltcart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VoltCart - flash sale e-commerce platform (React + Node + MongoDB + Redis)",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "test:oversell": "npm run test:oversell --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
